@@ -2,9 +2,13 @@ import React from 'react';
 import './home.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter'
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
+
+    const numero = useSelector((state) => state.counter.value)
 
     return (
         <>
@@ -22,7 +26,8 @@ const Home = () => {
                 <Counter />
             </main>
             <footer>
-
+                <h1>{numero}</h1>
+                <Link to="/secondpage">Second Page</Link>
             </footer>
 
         </>

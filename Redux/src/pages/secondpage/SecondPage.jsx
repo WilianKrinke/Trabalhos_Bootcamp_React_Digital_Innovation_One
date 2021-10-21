@@ -1,9 +1,13 @@
 import React from 'react';
-import './secondpage.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter'
+import { useSelector } from 'react-redux';
+import './secondpage.css'
 
 const Secondpage = () => {
+
+    const numero = useSelector((state) => state.counter.value)
+
     return (
         <>
             <header className="flex">
@@ -20,7 +24,7 @@ const Secondpage = () => {
                 <Counter />
             </main>
             <footer>
-                
+                <h1>{numero}</h1>
             </footer>
         </>
     );

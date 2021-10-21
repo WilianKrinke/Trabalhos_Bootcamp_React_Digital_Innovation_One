@@ -1,21 +1,25 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import {useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment } from '../../store/counterSlice/counterSlice'
 import './counter.css';
 
 
-const Counter = () => {    
+const Counter = () => {  
+    
+    const numero = useSelector((state) => state.counter.value)
+    const dispatch = useDispatch()
     
     return (
         <>
             <section className="container_counter">
-                <button> - </button>
+                <button onClick={() => dispatch(decrement())}> - </button>
 
                 <div>
-                    <h2>numero</h2>
+                    <h2>{numero}</h2>
                 </div>
 
-                <button> + </button>
+                <button onClick={() => dispatch(increment())}> + </button>
             </section>
         </>
     );
