@@ -1,9 +1,11 @@
 import React from 'react';
 import './home.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import Couter from '../../components/Counter/Counter';
+import Counter from '../../components/Counter/Counter'
+
 
 const Home = () => {
+
     return (
         <>
             <header className="flex">
@@ -17,7 +19,7 @@ const Home = () => {
                 </Breadcrumb>
             </header>
             <main>
-                <Couter />
+                <Counter />
             </main>
             <footer>
 
