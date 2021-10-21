@@ -1,0 +1,14 @@
+.container_counter {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin: 0px auto;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  font-size: 20px;
+}
