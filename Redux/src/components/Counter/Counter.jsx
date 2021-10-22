@@ -8,7 +8,7 @@ import './counter.css';
 const Counter = () => {  
     
     const numero = useSelector((state) => state.counter.value)
-    const sentence = useSelector((state) => state.sentence.value)
+    
     const dispatch = useDispatch()
     
     return (
@@ -18,7 +18,6 @@ const Counter = () => {
 
                 <div>
                     <h2>{numero}</h2>
-                    <h1>{sentence}</h1>
                 </div>
 
                 <button onClick={() => dispatch(increment())}> + </button>

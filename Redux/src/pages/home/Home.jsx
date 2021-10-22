@@ -4,6 +4,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Sentence from '../../components/Sentence/Sentence';
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
             </header>
             <main>
                 <Counter />
+                <Sentence />
             </main>
             <footer>
                 <h1>{numero}</h1>

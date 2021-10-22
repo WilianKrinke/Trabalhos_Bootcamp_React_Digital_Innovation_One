@@ -1,0 +1,10 @@
+.div_center {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.div_center button {
+  height: 70px;
+}
