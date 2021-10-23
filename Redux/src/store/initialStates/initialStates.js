@@ -1,5 +1,5 @@
 const initialStates = {
-    number: 6,
+    number: 0,
     quote: 'First String',
     on: false,
     array: [15,15,45,5],

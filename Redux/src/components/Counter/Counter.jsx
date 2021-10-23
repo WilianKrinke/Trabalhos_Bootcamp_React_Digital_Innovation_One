@@ -1,12 +1,11 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
-import { useSelector, connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 import './counter.css';
 
 
 const Counter = () => {  
     
-    const number = useSelector((state) => state)
+    const number = useSelector((state) => state.counterNumber.number)
     
     return (
         <>
@@ -23,4 +22,4 @@ const Counter = () => {
     );
 }
 
-export default connect()(Counter);
+export default Counter;

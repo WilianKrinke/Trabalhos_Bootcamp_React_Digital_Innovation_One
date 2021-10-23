@@ -2,12 +2,15 @@ import React from 'react';
 import './home.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter'
-import { Link } from 'react-router-dom';
 import Sentence from '../../components/Sentence/Sentence';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const Home = () => {
 
+    // para pegar estados iniciais
+    const number = useSelector((state) => state.counterNumber.number)
 
     return (
         <>
@@ -26,7 +29,7 @@ const Home = () => {
                 <Sentence />
             </main>
             <footer>
-                <h1>0</h1>
+                <h1>{number}</h1>
                 <Link to="/secondpage">Second Page</Link>
             </footer>
 
