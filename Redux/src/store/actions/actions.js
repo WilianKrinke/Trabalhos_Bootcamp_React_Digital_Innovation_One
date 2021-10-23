@@ -10,5 +10,5 @@ export const decrement = () => ({
 
 export const changeQuote = (quote) => ({
     type: typeActions.CHANGE_STRING,
-    payload: {quote}
+    payload: quote
 })

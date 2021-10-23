@@ -1,4 +1,5 @@
 import initialStates from '../initialStates/initialStates'
+import isEmpty from '../middlewares/middlewares'
 import typeActions from '../typeActions/typeActions'
 
 export const counterNumber = (state = initialStates, action) => {
@@ -24,7 +25,7 @@ export const sentenceString = (state = initialStates, action) => {
         case typeActions.CHANGE_STRING:            
             return{
                 ...state,
-                quote: action.payload
+                quote: isEmpty(action.payload)
             }
     
         default:
