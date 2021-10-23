@@ -6,7 +6,7 @@ import './secondpage.css'
 
 const Secondpage = () => {
 
-    const numero = useSelector((state) => state.counter.value)
+    const numero = useSelector((state) => state.counterNumber.number)
 
     return (
         <>
