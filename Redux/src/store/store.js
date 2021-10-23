@@ -1,11 +1,6 @@
-import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from './counterSlice/counterSlice'
-import changeSentence from './changeSentence/changeSentence'
+import {createStore} from 'redux'
+import rootReducer from './rootReducer/rootReducer'
 
+const store = createStore(rootReducer)
 
-export default configureStore({
-  reducer: {
-      counter: counterReducer,
-      sentence: changeSentence,
-  }
-})
+export default store;
