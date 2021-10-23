@@ -5,6 +5,7 @@ import Counter from '../../components/Counter/Counter'
 import Sentence from '../../components/Sentence/Sentence';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Switchdark from '../../components/SwitchDark/SwitchDark';
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
             <footer>
                 <h1>{number}</h1>
                 <Link to="/secondpage">Second Page</Link>
+                <Switchdark />
             </footer>
 
         </>
