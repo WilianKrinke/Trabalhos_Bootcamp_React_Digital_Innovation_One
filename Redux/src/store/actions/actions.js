@@ -12,3 +12,7 @@ export const changeQuote = (quote) => ({
     type: typeActions.CHANGE_STRING,
     payload: quote
 })
+
+export const toggleDarktoLight = () => ({
+    type: typeActions.TURN_ON
+})

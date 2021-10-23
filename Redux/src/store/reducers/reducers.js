@@ -38,7 +38,7 @@ export const turnOffOrOn = (state = initialStates, action) => {
         case typeActions.TURN_ON:            
             return{
                 ...state,
-                on: true
+                on: !state.on
             }
     
         default:
