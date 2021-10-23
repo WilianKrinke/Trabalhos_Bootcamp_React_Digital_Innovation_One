@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { toggleDarktoLight } from '../../store/actions/actions';
-import { SwitchButtonStyled } from './style';
+import { SpanStyled, SwitchButtonStyled } from './style';
 
 const Switchdark = () => {
     
@@ -19,9 +19,9 @@ const Switchdark = () => {
             <SwitchButtonStyled onClick={handleChange} toggleState={toggleState}>
                 <div></div>
             </SwitchButtonStyled>
-            <span>
+            <SpanStyled toggleState={toggleState}>
                 {toggleState ? "Light":"Dark"}
-            </span>            
+            </SpanStyled >            
         </>
     );
 }

@@ -21,3 +21,8 @@ export const SwitchButtonStyled = styled.div`
         left: ${props => props.toggleState ? "25px" : "-25px"};
     }
 `
+
+export const SpanStyled = styled.span`
+    transition: all .3s ease-in-out;
+    color: ${props => props.toggleState ? "#000": "#fff"}
+`

@@ -2,15 +2,18 @@ import React from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter'
 import { useSelector } from 'react-redux';
-import './secondpage.css'
+import { FooterStyled, HeaderStyled, MainStyled } from '../styled';
+import { Link } from 'react-router-dom';
+import Switchdark from '../../components/SwitchDark/SwitchDark';
 
 const Secondpage = () => {
 
     const numero = useSelector((state) => state.counterNumber.number)
+    const toggleState = useSelector((state) => state.turnOffOrOn.on)
 
     return (
         <>
-            <header className="flex">
+            <HeaderStyled className="flex" toggleState={toggleState}>
                 <h1>Second Page</h1>
                 <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -19,13 +22,15 @@ const Secondpage = () => {
 
                     <Breadcrumb.Item href="/thirdypage">Third Page</Breadcrumb.Item>
                 </Breadcrumb>
-            </header>
-            <main>
+            </HeaderStyled>
+            <MainStyled toggleState={toggleState}>
                 <Counter />
-            </main>
-            <footer>
+            </MainStyled>
+            <FooterStyled toggleState={toggleState}>
                 <h1>{numero}</h1>
-            </footer>
+                <Link to="/thirdypage">Third Page</Link>
+                <Switchdark />
+            </FooterStyled>
         </>
     );
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeQuote } from '../../store/actions/actions';
-
 import './sentence.css'
 
 const Sentence = () => {
@@ -9,8 +8,6 @@ const Sentence = () => {
     const [frase, setFrase] = useState('');
     const quote = useSelector(state => state.sentenceString.quote)
     const dispatch = useDispatch()
-
-
 
     function handleQuote(e) {
         e.preventDefault();

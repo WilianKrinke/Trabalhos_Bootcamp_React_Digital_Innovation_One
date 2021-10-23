@@ -1,16 +1,17 @@
 import React from 'react';
-import './thirdypage.css'
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
 import Counter from '../../components/Counter/Counter';
 import { useSelector } from 'react-redux';
+import { FooterStyled, HeaderStyled, MainStyled } from '../styled';
 
 const Thirdypage = () => {
 
-    const numero = useSelector((state) => state.counter.value)
+    const toggleState = useSelector((state) => state.turnOffOrOn.on)
+    const number = useSelector((state) => state.counterNumber.number)
 
     return (
         <>
-            <header className="flex">
+            <HeaderStyled className="flex" toggleState={toggleState}>
                 <h1>Thirdy Page</h1>
                 <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -19,13 +20,13 @@ const Thirdypage = () => {
 
                     <Breadcrumb.Item active>Third Page</Breadcrumb.Item>
                 </Breadcrumb>
-            </header>
-            <main>
+            </HeaderStyled>
+            <MainStyled toggleState={toggleState}>
                 <Counter/>
-            </main>
-            <footer>
-                <h1>{numero}</h1>
-            </footer>
+            </MainStyled>
+            <FooterStyled toggleState={toggleState}>
+                <h1>{number}</h1>
+            </FooterStyled>
         </>
     );
 }
