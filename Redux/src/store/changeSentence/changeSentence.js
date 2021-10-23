@@ -1,4 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
+import {invertSentence} from '../middlewares/middlewares'
 
 export const changeSentence = createSlice({
     name: 'sentence',
@@ -9,7 +10,7 @@ export const changeSentence = createSlice({
 
     reducers:{
         changeString: (state, action) => {
-            state.value = action.payload
+            state.value = invertSentence(action.payload)
         }
     }
 })
