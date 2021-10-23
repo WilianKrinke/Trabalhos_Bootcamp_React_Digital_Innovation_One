@@ -7,3 +7,8 @@ export const increment = () => ({
 export const decrement = () => ({
     type: typeActions.DECREMENT
 })
+
+export const changeQuote = (quote) => ({
+    type: typeActions.CHANGE_STRING,
+    payload: {quote}
+})
