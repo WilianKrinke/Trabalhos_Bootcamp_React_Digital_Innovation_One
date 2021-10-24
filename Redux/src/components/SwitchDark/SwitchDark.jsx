@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { toggleDarktoLight } from '../../store/actions/actions';
 import { SpanStyled, SwitchButtonStyled } from './style';
+import Switch from '@mui/material/Switch';
 
 const Switchdark = () => {
     
@@ -21,7 +22,9 @@ const Switchdark = () => {
             </SwitchButtonStyled>
             <SpanStyled toggleState={toggleState}>
                 {toggleState ? "Light":"Dark"}
-            </SpanStyled >            
+            </SpanStyled >
+            <br />
+            <Switch defaultChecked/>       
         </>
     );
 }
