@@ -9,6 +9,7 @@ export const HeaderStyled = styled.header`
     flex-flow: column wrap;
     transition: all .3s ease-in-out;
     background-color: ${props => props.toggleState ? "#ff6257" : "#080808"};
+    opacity: ${props => !props.teste ? "0" : "1"};
 `
 
 export const MainStyled = styled.main`
@@ -20,6 +21,7 @@ export const MainStyled = styled.main`
     flex-flow: column wrap;
     transition: all .3s ease-in-out;
     background-color: ${props => props.toggleState ? "#ff6257" : "#080808"};
+    opacity: ${props => !props.teste ? "0" : "1"};
 `
 
 export const FooterStyled = styled.footer`
@@ -31,4 +33,5 @@ export const FooterStyled = styled.footer`
     flex-flow: column wrap;
     transition: all .3s ease-in-out;
     background-color: ${props => props.toggleState ? "#ff6257" : "#080808"};
+    opacity: ${props => !props.teste ? "0" : "1"};
 `
