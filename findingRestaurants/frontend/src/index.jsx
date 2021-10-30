@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import '@material/react-text-field/dist/text-field.css';
+import '@material/react-material-icon/dist/material-icon.css';
+import theme from './assets/theme';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
