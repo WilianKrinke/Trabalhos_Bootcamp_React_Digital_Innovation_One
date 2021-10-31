@@ -10,7 +10,7 @@ export const MenuContainer = styled.nav`
   background-color: #FBF5E4;
 
   ::-webkit-scrollbar{
-    width: 10px;
+    width: 8px;
   }
 
   ::-webkit-scrollbar-track{
@@ -18,7 +18,7 @@ export const MenuContainer = styled.nav`
   }
 
   ::-webkit-scrollbar-thumb{
-    background-color: #E6C968;
-    border-radius: 10px;
+    background-color: #B5ADCB;
+    border-radius: 25px;
   }
 `

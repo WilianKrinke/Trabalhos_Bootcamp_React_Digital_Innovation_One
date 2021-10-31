@@ -9,14 +9,14 @@ const Menulateral = () => {
     <MenuContainer>
       <ContainerSearch />
       <Carrousel />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
+      <RestaurantCard titulo={'Algum Titulo'} rating={4} endereco={'Algum Endereco de Restaurante'} photo={"Arquivo de foto"}/>
     </MenuContainer>
   );
 };
