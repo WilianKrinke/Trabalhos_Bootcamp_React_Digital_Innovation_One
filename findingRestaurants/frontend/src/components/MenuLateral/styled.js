@@ -5,7 +5,6 @@ export const MenuContainer = styled.nav`
   width: 30vw;
   overflow-x: hidden;
   overflow-y: auto;
-  border: 1px solid;
   padding: 5px;
   background-color: #FBF5E4;
 
