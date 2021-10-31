@@ -8,4 +8,17 @@ export const MenuContainer = styled.nav`
   border: 1px solid;
   padding: 5px;
   background-color: #FBF5E4;
+
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background-color: #FBF5E4;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    background-color: #E6C968;
+    border-radius: 10px;
+  }
 `

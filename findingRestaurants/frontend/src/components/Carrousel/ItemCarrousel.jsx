@@ -1,13 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { Item } from './styled';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const ItemCarrousel = ({ nome }) => {
+const ItemCarrousel = ({ nome, image }) => {
   return (
     <>
-      <Item>
+      <Item image={image}>
         <h3>{nome}</h3>
-        <img src="" alt="alguma imagem" width="100%" height="100px" />
       </Item>
     </>
   );
@@ -15,6 +16,7 @@ const ItemCarrousel = ({ nome }) => {
 
 ItemCarrousel.propTypes = {
   nome: propTypes.string,
+  image: propTypes.any,
 };
 
 export default ItemCarrousel;

@@ -6,7 +6,7 @@ import logo from '../../assets/logo/logo.svg';
 const ContainerSearch = () => {
   return (
     <ContainerStyled>
-      <img src={logo} alt="Logo" width="210px" height="100px" />
+      <img src={logo} alt="Logo" width="150px" height="100px" />
       <Searchfield />
     </ContainerStyled>
   );
