@@ -16,3 +16,8 @@ export const changeQuote = (quote) => ({
 export const toggleDarktoLight = () => ({
     type: typeActions.TURN_ON
 })
+
+export const changeLoading = (condition) => ({
+    type: typeActions.CHANGE_LOADING,
+    payload: condition
+})

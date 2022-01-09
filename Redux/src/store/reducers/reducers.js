@@ -46,3 +46,18 @@ export const turnOffOrOn = (state = initialStates, action) => {
     }
 }
 
+export const changeLoadingReducer = (state = initialStates, action) => {
+    switch (action.type) {
+        case typeActions.CHANGE_LOADING: 
+        
+            console.log(action.payload)
+            return{
+                ...state,
+                loading: action.payload.condition
+            }
+    
+        default:
+            return state;
+    }
+}
+

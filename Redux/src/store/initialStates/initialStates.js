@@ -6,7 +6,8 @@ const initialStates = {
     obj: {
         name: 'wilian',
         age: 31
-    }
+    },
+    loading: true
 }
 
 export default initialStates;
