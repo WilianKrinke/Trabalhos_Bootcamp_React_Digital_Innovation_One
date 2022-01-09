@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -6,24 +7,19 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import Counter from "../../components/Counter/Counter";
 import Sentence from "../../components/Sentence/Sentence";
 import Switchdark from "../../components/SwitchDark/SwitchDark";
-import { useDispatch } from "react-redux";
-import { changeLoading } from "../../store/actions/actions";
+import { useState } from "react";
 
 const Home = () => {
   const number = useSelector((state) => state.counterNumber.number);
   const toggleState = useSelector((state) => state.turnOffOrOn.on);
 
-  const dispatch = useDispatch();
-
-  const loadingState = useSelector(
-    (state) => state.changeLoadingReducer.loading
-  );
+  const [loadingState, setloadingState] = useState(true);
 
   useEffect(() => {
-    console.log(loadingState);
-    dispatch(changeLoading(false));
-    console.log(loadingState);
-  }, [loadingState, dispatch]);
+    setTimeout(() => {
+      setloadingState(false);
+    }, 1000);
+  }, []);
 
   return (
     <>
@@ -37,9 +33,7 @@ const Home = () => {
             <h1>Home</h1>
             <Breadcrumb>
               <Breadcrumb.Item active>Home</Breadcrumb.Item>
-
               <Breadcrumb.Item href="/secondpage">Second Page</Breadcrumb.Item>
-
               <Breadcrumb.Item href="/thirdypage">Third Page</Breadcrumb.Item>
             </Breadcrumb>
           </HeaderStyled>
